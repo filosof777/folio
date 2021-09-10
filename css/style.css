@@ -1,0 +1,275 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color:var(--pemary-color);
+  background-color: var(--body-color);
+  perspective: 1000px;
+  transition: all 0.4s ease;
+  /* background-color: #ccc; */
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+  --color-black: #000;
+  --pemary-color: #fff;
+  --body-color: #f2f2f2;
+  --text-color: #111517;
+  --nav-color: #495fef;
+}
+
+.dark-content {
+  --pemary-color: #2B3844;
+  --body-color: #202C36;
+  --text-color: #fff;
+}
+
+.dark-light-btn {
+  padding: 10px;
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  top: 250px;
+  border-radius: 10px;
+  margin: 0;
+  border: 0;
+  font-size: 16px;
+  line-height: 21px;
+  cursor: pointer;
+}
+
+.head-sec {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: var(--body-color);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--text-color);
+
+  /* color: var(--color-black); */
+}
+
+.head {
+  position: relative;
+  padding: 0 40px;
+}
+
+.nav-item {
+  /* color: white; */
+  margin-right: 20px;
+}
+
+.nav-list {
+  align-items: center;
+  display: flex;
+}
+
+.nav-link {
+  align-items: center;
+  display: flex;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+.arrow::after {
+  content: "";
+  background-image: url("../img/down-arrow.png");
+  width: 22px;
+  height: 20px;
+  margin-left: 5px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-color: var(--body-color);
+}
+
+.nav-link:hover {
+  color: var(--nav-color);
+}
+
+.main-sec {
+  padding: 150px 0;
+
+}
+
+.main-des {
+  color: var(--text-color);
+}
+
+.main-title {
+  font-size: 80px;
+  margin-bottom: 100px;
+}
+
+.slide {
+  width: 280px;
+  align-items: center;
+  display: flex;
+  padding: 20px 40px;
+  background-color: #495fef;
+  border-radius: 50px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.slide::after {
+  content: "";
+  background-image: url("../img/right-arrow.png");
+  width: 24px;
+  height: 24px;
+  margin-left: 40px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.slide-sec {
+  position: absolute;
+}
+
+.slide:hover {
+  position: absolute;
+  margin-top: -10px;
+}
+
+.main-nav {
+  margin: 50px 0;
+}
+
+.main-link {
+  margin-right: 30px;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+.main-link:hover {
+  color: var(--nav-color);
+}
+
+.img-center {
+  width: 100%;
+  margin: 3% 0;
+  padding: 0 3%;
+}
+
+.image-sec {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.des-img {
+  width: 84%;
+  margin: 6% 0;
+  padding: 0 12%;
+  color: var(--text-color);
+  opacity: 0;
+  font-size: 16px;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  border-radius: 15px;
+  transform:translate(-50%, -50%);
+  transition: all 0.7s ease;
+}
+
+.image-sec:hover .des-img {
+  opacity: 0.6;
+  position: absolute;
+  background-color: var(--body-color);
+  /* margin-top: 50px; */
+  bottom: -10px;
+}
+
+.foo-des {
+  padding: 100px 0;
+  color: var(--text-color);
+}
+
+.foo-text {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 10px;
+}
+
+.foo-text::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: green;
+  display: inline-block;
+}
+
+.foo-title {
+  color: var(--text-color);
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.foo-link {
+  margin: 0 auto;
+  width: 300px;
+  justify-content: center;
+  padding: 20px 40px;
+  border-radius: 30px;
+  align-items: center;
+  display: flex;
+  color: #fff;
+  background-color: #56b381;
+}
+
+.foo-link::before {
+  content: "";
+  background-image: url("../img/comment.png");
+  width: 24px;
+  height: 20px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
+.foo-link-sec {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+}
+
+.foo-link-sec:hover {
+  position: absolute;
+  margin-top: -10px;
+}
+
+.end-foo {
+  margin-top: 200px;
+}
